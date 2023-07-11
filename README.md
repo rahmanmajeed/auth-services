@@ -1,1 +1,1 @@
-# Authentications ways in NODE.jS
+# Implement JWT authentication using Express.
