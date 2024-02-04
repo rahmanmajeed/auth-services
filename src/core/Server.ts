@@ -1,8 +1,5 @@
-import dotenv from "dotenv";
 import express, { Express, Request, Response } from "express";
-import { IServer } from "../interfaces/server";
-
-dotenv.config();
+import { IServer } from "../Interfaces/server";
 
 class Server {
   app: Express = express();
@@ -18,14 +15,16 @@ class Server {
   }
 
   async start() {
-
-    this.app.get('/hello', (req:Request, res:Response) => {
-      res.send('Express + TypeScript Server');
-    })
+    this.app.get("/hello", (req: Request, res: Response) => {
+      res.send("Express + TypeScript Server");
+    });
     // server start...
     await new Promise<void>((r) => {
       this.server = this.app.listen(this.port, this.host, () => {
-        console.log(`⚡️[server]: Server is running at ${this.host}:${this.port}`);
+        console.log(
+          `⚡️[server]: Server is running at ${this.host}:${this.port}`
+        );
+
         r();
       });
     });
@@ -35,4 +34,4 @@ class Server {
     };
   }
 }
-export default Server
+export default Server;
