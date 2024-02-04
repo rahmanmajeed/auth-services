@@ -1,7 +1,7 @@
 // import express, { Express, Request, Response } from 'express';
 // import dotenv from 'dotenv';
 
-import Server from "./src/core/Server";
+import Server from "./src/Core/Server";
 
 // dotenv.config();
 
